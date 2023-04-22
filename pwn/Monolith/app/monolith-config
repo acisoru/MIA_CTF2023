@@ -1,0 +1,10 @@
+service mynetd
+{
+	disable = no
+	type = UNLISTED
+	socket_type = stream
+	port = 20203
+	wait = no
+	user = monolith
+	server = /monolith
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Camel Calculator 🐪</title>
+<link href="./../static/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="container" >
+<div class="row">
+<div class="twelve columns">
+<img src="./../static/img/camel-logo.png">
+<h1 class="main-title">А сколько верблюдов стоишь ты?</h1>
+</div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row form-row">
+<div class="four columns">
+<h4>Возраст <output class="age-out"></output></h4>
+</div>
+<div class="eight columns">
+    1 год
+<input type="range" class="range" name="age" min="14" max="70" value="18" />
+    100 лет и выше
+</div>
+</div>
+<div class="row form-row">
+<div class="four columns">
+<h4>Рост (см) <output class="height-out"></output></h4>
+</div>
+<div class="eight columns">
+<label class="inline-radio">
+<input type="radio" name="height" value="small" checked="checked">
+<span class="label-body">низкий</span>
+</label>
+<label class="inline-radio">
+<input type="radio" name="height" value="medium">
+<span class="label-body">средний</span>
+</label>
+<label class="inline-radio">
+<input type="radio" name="height" value="high">
+<span class="label-body">высокий</span>
+</label>
+<label class="inline-radio">
+<input type="radio" name="height" value="really_high">
+<span class="label-body">очень высокий</span>
+</label>
+</div>
+</div>
+<div class="row form-row">
+<div class="four columns">
+<h4>Цвет волос</h4>
+</div>
+<div class="eight columns">
+<select name="haircolor" class="u-full-width">
+<option value="blonde">блондин(-ка)</option>
+<option value="brown">карие</option>
+<option value="black">брюнет(-ка)</option>
+<option value="red">рыжий(-ая)</option>
+<option value="grey">серые</option>
+</select>
+</div>
+</div>
+<div class="row form-row">
+<div class="four columns">
+</label>
+</nav>
+</div>
+</div>
+<div class="row form-row">
+<div class="four columns">
+<h4>Цвет глаз</h4>
+</div>
+<div class="eight columns">
+<label class="inline-radio">
+<input type="radio" name="eyecolor" value="blue" checked="checked">
+<span class="label-body">голубые</span>
+</label>
+<label class="inline-radio">
+<input type="radio" name="eyecolor" value="green">
+<span class="label-body">зеленые</span>
+</label>
+<label class="inline-radio">
+<input type="radio" name="eyecolor" value="brown">
+<span class="label-body">карие</span>
+</label>
+<label class="inline-radio">
+<input type="radio" name="eyecolor" value="grey">
+<span class="label-body">серые</span>
+</label>
+</div>
+</div>
+<div class="row form-row">
+</nav>
+</div>
+<div class="row form-row">
+<h4>Ваше имя</h4>
+</div>
+<div class="eight columns">
+<form action="result" method="post">
+    <input type="text" name="shortcode" class="input-search" value="" required>
+    <input type="submit" value="Рассчитать" class="button-primary">
+</form>
+</div>
+<div class="row">
+</div>
+</form>
+</div>
+<footer class="container">
+</footer>
+<script src="./main.js"></script>
+</body>
+</html>

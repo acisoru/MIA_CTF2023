@@ -1,0 +1,15 @@
+service minipython
+{
+    disable = no
+    type = UNLISTED
+    wait = no
+    server = /run.sh
+    socket_type = stream
+    protocol = tcp
+    user = limiteduser
+    port = 1337
+    flags = REUSE
+    per_source = UNLIMITED
+    rlimit_cpu = UNLIMITED
+    nice = 18
+}

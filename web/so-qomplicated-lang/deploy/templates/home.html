@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Учёт сотрудников</title>
+</head>
+<body>
+<div class="container">
+<h1>Сотрудники</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>ФИО</th>
+    </tr>
+
+    {{range .Humans}}
+    <tr>
+        <td>{{.ID}}</td>
+        <td>{{.Name}}</td>
+    </tr>
+    {{end}}
+</table>
+
+<h2>Добавить сотрудника</h2>
+
+<form method="POST" action="/add">
+    <label for="name">ФИО:</label><br/>
+    <input type="text" id="name" name="name"><br/><br/>
+
+    <input type="submit" value="Добавить!">
+</form>
+</div>
+</body>
+</html>

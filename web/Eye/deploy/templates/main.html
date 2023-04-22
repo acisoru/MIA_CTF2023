@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eye</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .input-container {
+      background-color: #ffffff;
+      padding: 90px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button[type="submit"], input[type="submit"] {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 75px;
+      margin-top: 50px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    input[type="url"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+  </style>
+</head>
+<body>
+  <form action="/login">
+    <input type="submit" style="margin-bottom: 20px"  value="Login page" />
+  </form>
+  <div class="input-container">
+    <h2 class="slogan">Предложите нам красивый заголовок</h2>
+    <form action="/login" method="get">
+      <input type="text" name="title" placeholder="Автоматизированная информационная система розыска преступников" required>
+      <br>
+      <button type="submit">Go</button>
+    </form>
+  </div>
+
+  <div class="form-container">
+    <h2 class="slogan">Отправьте пример нам на рассмотрение</h2>
+    <form action="/send" method="post">
+      <input type="url" name="link" placeholder="https://example.com" required>
+      <br>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>

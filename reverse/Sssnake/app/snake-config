@@ -1,0 +1,10 @@
+service mynetd
+{
+	disable = no
+	type = UNLISTED
+	socket_type = stream
+	port = 3777
+	wait = no
+	user = snake
+	server = /snake
+}

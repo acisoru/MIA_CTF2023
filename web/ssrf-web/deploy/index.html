@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>One more request service</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #eee;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mdl-card {
+            margin: 50px auto;
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        .mdl-card__title {
+            background-color: #ff6e40 !important;
+            color: #fff;
+        }
+
+        .mdl-card__supporting-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .mdl-textfield {
+            margin: 10px;
+            width: 300px;
+        }
+
+        .mdl-textfield__label {
+            color: rgba(0, 0, 0, 0.54);
+        }
+
+        .mdl-checkbox__label {
+            color: rgba(0, 0, 0, 0.54);
+            margin-left: 10px;
+        }
+
+        .mdl-card__actions {
+            text-align: right;
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+        }
+
+        .mdl-button {
+            margin: 10px;
+            background-color: #ff6e40 !important;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text" align="center">One more request service</h2>
+        <h3 class="mdl-card__title-text">P.S. Для тестирования на уязвимости подняли сервер на 127.0.0.1:5555, попробуй</h3>
+    </div>
+    <div class="mdl-card__supporting-text">
+        <form action="/send_request" method="post">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="url">Enter a URL:</label>
+                <input class="mdl-textfield__input" type="text" id="url" name="url">
+            </div>
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="headers_only">
+                <input type="checkbox" id="headers_only" class="mdl-checkbox__input" name="headers_only">
+                <span class="mdl-checkbox__label">Response Headers Only</span>
+            </label>
+            <div class="mdl-card__actions">
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

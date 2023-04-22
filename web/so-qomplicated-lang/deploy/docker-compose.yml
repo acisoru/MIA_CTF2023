@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  sqldbtaskmia:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpassword
+  webapp_task_mia:
+    restart: always
+    build: .
+    depends_on:
+      - sqldbtaskmia
+    ports:
+      - "6109:8080"
+    environment:
+      FLAG: CTF{y0u_w1ll_n3v3r_l1ke_sql_aga1n}
+      JWT_TOKEN: BYymynNYkQ33IXOPCDazc7J77ITukkjppqquhmA6wYP2z9opYVxUNIjww9pM7pdfxwtO1Eyct6FKefmpKOQtbw==
+    command: /app/appbin

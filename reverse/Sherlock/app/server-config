@@ -1,0 +1,10 @@
+service mynetd
+{
+	disable = no
+	type = UNLISTED
+	socket_type = stream
+	port = 7878
+	wait = no
+	user = elf
+	server = /server
+}

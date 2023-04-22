@@ -1,0 +1,10 @@
+p {
+  display: table;
+  margin: 0 auto;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.camel-icon {
+  display: table;
+  margin: 0 auto;
+}

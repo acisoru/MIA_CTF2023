@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  ssrf_task_easy:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1337:8080"
+    command: sh -c "(/bin/app_main &) && /bin/app_flag_srv"
